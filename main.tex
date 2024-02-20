@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+
+\title{PChem II: Speed of Sound}
+\author{John Fisher}
+\date{February 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Sound travels as a longitudinal pressure wave through physical medium.  Wave motion satisfies the wave equation.  The simplest wave equation represents a wave traveling in one dimension:
+
+\begin{align}
+    \frac{\partial^2u(x,t)}{\partial^2x}C = \frac{\partial^2u(x,t)}{\partial^2t}
+\end{align}
+
+Meaning the acceleration of the wave with respect to the time dimension in proportional to the acceleration with respect to the spatial dimension(s), or in other words, the particles of a wave push themselves apart with a force proportional to the extent they are compacted.  The proportionality constant represents the inertia of the medium and thus the rate at which a force will displace it.  This constant can be shown to be equal to the square of the wave speed, yielding the equation:
+
+\begin{align}
+    \frac{\partial^2u(x,t)}{\partial^2x} = \frac{1}{v^2}\frac{\partial^2u(x,t)}{\partial^2t}
+\end{align}
+
+The speed of a wave is analogous to the period of simple harmonic oscillator.  A particle mass reduces wave speed in the same way it oscillates more slowly attached to a spring.  The period of a pendulum:
+
+\begin{align}
+    T = 2\pi \sqrt{\frac{m}{k}}
+    \intertext{\hspace{1cm} Where $T$ is the period, $m$ is the mass, and $k$ is the spring constant.}
+\end{align}
+
+Is proportional to the square root of mass.  Correspondingly, wave speed is proportional to the inverse square root of the mass:
+
+\begin{align}
+    v = \sqrt{\frac{\gamma RT}{M}} \label{eq: 1}
+    \intertext{\hspace{1cm} Where $\gamma$ is the adiabatic index, $\frac{C_p}{C_v}$, and $M$ is the molar mass of the medium}
+\end{align}
+
+The speed of a wave can be determined using a resonating container.  For example, a longitudinal wave traveling along a surface will vibrate that surface.  Vibrations which are coincident with resonant frequencies of the surface will be amplified as the wave travels, while other frequencies will be canceled out.  Resonant frequencies have wavelengths which are factors of the resonator length:
+
+\begin{align}
+    \nu_n = \frac{nv_s}{2L} \label{eq: 2}
+\end{align}
+
+\section{Experiment}
+
+Carbon dioxide, nitrogen, and helium were passed slowly from a pressurized cylinder into a PVC tube and exited through a light vacuum.  The sound waves from the expansion of the gas induced sound waves in the tube, which were recorded using a microphone and Fourier transformed.  The resonant wave speeds were calculated using (\ref{eq: 1}), and the adiabatic index was calculated using (\ref{eq: 2}).
+
+\section{Results}
+
+The speed of the resonant waves was approximately proportional to the inverse square root of the molecule mass as expected.  Deviation is explained by the contribution of the adiabatic index.  Carbon dioxide had index of $0.80(9)$, nitrogen $0.9(6)$, and Helium $1.01(8)$
+
+\section{Discussion}
+
+The literature values are provided as carbon dioxide : $1.3$, nitrogen : $1.4$, Helium : $1.6$ when adjusted for temperature according to (\red{1}).  Each value deviates enormously from the experimental value, and furthermore a true adiabatic index is always greater than one.  However, while inconsistent with the literature, the experimental values are consistent with themselves.  When the recorded length of the resonating tube is increased by a factor of 1.27, the resulting calculations are each as predicted: CO2 : $1.30 \mp 9.15$, N2 : $1.4 (9)$, He : $1.64 \mp 0.12$.  The extreme error for nitrogen was a product of its wide peaks.
+
+\end{document}
+
