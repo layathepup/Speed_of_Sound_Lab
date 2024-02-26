@@ -1,0 +1,494 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18931,        486]
+NotebookOptionsPosition[     17641,        455]
+NotebookOutlinePosition[     18087,        472]
+CellTagsIndexPosition[     18044,        469]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ClearAll", "[", 
+    RowBox[{
+    "Zrot", ",", " ", "Urot", ",", " ", "Cvrot", ",", " ", "ATENrot", ",", 
+     " ", "\[Epsilon]", ",", " ", "\[Beta]", ",", " ", "x"}], "]"}], ";"}], 
+  " "}]], "Input",
+ CellChangeTimes->{{3.917899134724506*^9, 3.9178991451792927`*^9}, {
+  3.917899195516466*^9, 3.917899205690382*^9}, {3.917899336685925*^9, 
+  3.917899349330449*^9}, {3.917899532044017*^9, 3.917899556457754*^9}, {
+  3.917903010968495*^9, 3.917903024284438*^9}, {3.91790334506252*^9, 
+  3.917903387425027*^9}, {3.917903432391831*^9, 3.917903432772498*^9}, {
+  3.9179037408125257`*^9, 3.91790377417371*^9}, {3.917904977893845*^9, 
+  3.917904984928296*^9}},
+ CellLabel->
+  "In[567]:=",ExpressionUUID->"7af3f14d-b93d-4e65-810a-75f5787ed234"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Zrot", "[", 
+   RowBox[{"\[Epsilon]_", ",", " ", "\[Beta]_"}], "]"}], " ", "=", " ", 
+  RowBox[{"Sum", "[", 
+   RowBox[{
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      RowBox[{"-", "\[Beta]"}], "*", "\[Epsilon]", "*", "m", 
+      RowBox[{"(", 
+       RowBox[{"m", "+", "1"}], ")"}]}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"m", ",", " ", "0", ",", " ", "Infinity"}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.917877225030588*^9, 3.9178772314546623`*^9}, {
+   3.9178772936144667`*^9, 3.917877327709437*^9}, 3.91788366558219*^9, {
+   3.917887238472713*^9, 3.917887252127984*^9}, 3.917887291904614*^9, {
+   3.9178874841709347`*^9, 3.917887531818699*^9}, {3.9178879846717243`*^9, 
+   3.917887999751678*^9}, 3.917888080869389*^9, {3.917896624474845*^9, 
+   3.917896625850153*^9}, {3.91789669653653*^9, 3.917896696698419*^9}, {
+   3.9178970032978373`*^9, 3.917897004950014*^9}, {3.9178977009259768`*^9, 
+   3.917897705815228*^9}, 3.917897759852901*^9, 3.917899941740776*^9},
+ CellLabel->
+  "In[568]:=",ExpressionUUID->"a30910aa-f779-48c3-926c-1220f61ceccf"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"EllipticTheta", "[", 
+   RowBox[{"2", ",", "0", ",", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]]}], "]"}], 
+  RowBox[{"2", " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]], ")"}], 
+    RowBox[{"1", "/", "4"}]]}]]], "Output",
+ CellChangeTimes->{
+  3.917899960948004*^9, 3.917903038379673*^9, 3.9179031329493027`*^9, 
+   3.917903216509727*^9, 3.9179032481917048`*^9, 3.9179033589136877`*^9, 
+   3.917903389808422*^9, 3.9179034368555593`*^9, 3.917903469474607*^9, 
+   3.917903517717338*^9, 3.917903690880674*^9, {3.917903762754726*^9, 
+   3.9179037773450003`*^9}, {3.9179038175048103`*^9, 3.917903844273488*^9}, 
+   3.917903909403351*^9, {3.917904057429122*^9, 3.917904072495392*^9}, {
+   3.917904133470976*^9, 3.917904168525776*^9}, 3.9179042217388906`*^9, {
+   3.9179043691735973`*^9, 3.917904385043434*^9}, 3.9179044631987553`*^9, {
+   3.917904499702718*^9, 3.91790452428334*^9}, 3.917904615712978*^9, 
+   3.917904750511745*^9, {3.917904887099002*^9, 3.917904897787788*^9}, {
+   3.917904967494246*^9, 3.917904989141925*^9}, {3.917905100855294*^9, 
+   3.917905121830523*^9}},
+ CellLabel->
+  "Out[568]=",ExpressionUUID->"a19db392-3856-4dc8-9857-719507729913"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Urot", "[", 
+   RowBox[{"\[Epsilon]_", ",", " ", "\[Beta]_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"-", "1"}], "*", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"Log", "[", 
+      RowBox[{"Zrot", "[", 
+       RowBox[{"\[Epsilon]", ",", "\[Beta]"}], "]"}], "]"}], " ", ",", " ", 
+     "\[Beta]"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.9178780314948373`*^9, 3.91787805167459*^9}, 
+   3.917878104744549*^9, {3.9178873521135483`*^9, 3.917887360730773*^9}, {
+   3.917887418147051*^9, 3.917887446565854*^9}, {3.9178876491430283`*^9, 
+   3.917887662782476*^9}, {3.917887698538168*^9, 3.917887728506179*^9}, {
+   3.9178880853693333`*^9, 3.9178880856120033`*^9}, {3.917897239021305*^9, 
+   3.917897240121633*^9}, {3.9178976978819523`*^9, 3.917897704094776*^9}, 
+   3.917897759260804*^9, {3.917898772699724*^9, 3.917898772924687*^9}, {
+   3.917898939175099*^9, 3.9178989415101843`*^9}, {3.91789919669425*^9, 
+   3.917899242263517*^9}, 3.917899942436355*^9},
+ CellLabel->
+  "In[569]:=",ExpressionUUID->"5654f166-2ab0-4a16-ad44-9ea1b990a6f2"],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"2", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{
+          RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]], ")"}], 
+       RowBox[{"1", "/", "4"}]], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"\[Epsilon]", " ", 
+          RowBox[{"EllipticTheta", "[", 
+           RowBox[{"2", ",", "0", ",", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]]}], "]"}]}], 
+         RowBox[{"8", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]], ")"}], 
+           RowBox[{"1", "/", "4"}]]}]], "-", 
+        RowBox[{
+         FractionBox["1", "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{
+             RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]], ")"}], 
+          RowBox[{"3", "/", "4"}]], " ", "\[Epsilon]", " ", 
+         RowBox[{
+          SuperscriptBox["EllipticTheta", 
+           TagBox[
+            RowBox[{"(", 
+             RowBox[{"0", ",", "0", ",", "1"}], ")"}],
+            Derivative],
+           MultilineFunction->None], "[", 
+          RowBox[{"2", ",", "0", ",", 
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{
+             RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]]}], "]"}]}]}], 
+       ")"}]}], ")"}], "/", 
+    RowBox[{"EllipticTheta", "[", 
+     RowBox[{"2", ",", "0", ",", 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]]}], "]"}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.917899960956641*^9, 3.917903038385324*^9, 3.917903132958222*^9, 
+   3.9179032165199537`*^9, 3.917903248200975*^9, 3.917903358923215*^9, 
+   3.9179033898296747`*^9, 3.917903436866447*^9, 3.917903469483634*^9, 
+   3.917903517725136*^9, 3.917903690888268*^9, {3.9179037627646637`*^9, 
+   3.917903777355165*^9}, {3.917903817513386*^9, 3.917903844281822*^9}, 
+   3.917903909412117*^9, {3.917904057436892*^9, 3.917904072504274*^9}, {
+   3.917904133478936*^9, 3.9179041685343437`*^9}, 3.917904221747262*^9, {
+   3.917904369179784*^9, 3.9179043850510473`*^9}, 3.9179044632065277`*^9, {
+   3.917904499710524*^9, 3.9179045242914057`*^9}, 3.917904615718939*^9, 
+   3.917904750518565*^9, {3.917904887105941*^9, 3.917904897794273*^9}, {
+   3.9179049675024137`*^9, 3.917904989151306*^9}, {3.917905100862316*^9, 
+   3.917905121837515*^9}},
+ CellLabel->
+  "Out[569]=",ExpressionUUID->"74e42a39-bfe9-49c2-b056-b77bed0d11e2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Cvrot", "[", 
+   RowBox[{"\[Epsilon]_", ",", " ", "\[Beta]_", ",", " ", "k_"}], "]"}], " ", 
+  "=", " ", 
+  RowBox[{
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"Urot", "[", 
+      RowBox[{"\[Epsilon]", ",", " ", "\[Beta]"}], "]"}], ",", " ", 
+     "\[Beta]"}], "]"}], "*", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"\[Beta]", "^", "2"}]}], "*", "k"}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.917883852508601*^9, 3.917883918084778*^9}, {
+   3.9178857188747253`*^9, 3.917885721313159*^9}, {3.917887715138928*^9, 
+   3.917887746522827*^9}, 3.91788809758323*^9, {3.91789728887486*^9, 
+   3.917897289192114*^9}, {3.9178977079258823`*^9, 3.917897708480279*^9}, 
+   3.9178977576603813`*^9, {3.917898775403718*^9, 3.91789877558232*^9}, 
+   3.9178999431343193`*^9, {3.9179031928683853`*^9, 3.9179031944079847`*^9}},
+ CellLabel->
+  "In[570]:=",ExpressionUUID->"59699b22-5b13-491d-bae4-54763d3fd738"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "k"}], " ", 
+  SuperscriptBox["\[Beta]", "2"], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]], ")"}], 
+        RowBox[{"1", "/", "4"}]], " ", "\[Epsilon]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[Epsilon]", " ", 
+           RowBox[{"EllipticTheta", "[", 
+            RowBox[{"2", ",", "0", ",", 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{
+               RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]]}], "]"}]}], 
+          RowBox[{"8", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{
+               RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]], ")"}], 
+            RowBox[{"1", "/", "4"}]]}]], "-", 
+         RowBox[{
+          FractionBox["1", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]], ")"}], 
+           RowBox[{"3", "/", "4"}]], " ", "\[Epsilon]", " ", 
+          RowBox[{
+           SuperscriptBox["EllipticTheta", 
+            TagBox[
+             RowBox[{"(", 
+              RowBox[{"0", ",", "0", ",", "1"}], ")"}],
+             Derivative],
+            MultilineFunction->None], "[", 
+           RowBox[{"2", ",", "0", ",", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]]}], "]"}]}]}], 
+        ")"}]}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"2", " ", 
+       RowBox[{"EllipticTheta", "[", 
+        RowBox[{"2", ",", "0", ",", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]]}], "]"}]}], ")"}]}],
+     "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]], ")"}], 
+        RowBox[{"5", "/", "4"}]], " ", "\[Epsilon]", " ", 
+       RowBox[{
+        SuperscriptBox["EllipticTheta", 
+         TagBox[
+          RowBox[{"(", 
+           RowBox[{"0", ",", "0", ",", "1"}], ")"}],
+          Derivative],
+         MultilineFunction->None], "[", 
+        RowBox[{"2", ",", "0", ",", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]]}], "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[Epsilon]", " ", 
+           RowBox[{"EllipticTheta", "[", 
+            RowBox[{"2", ",", "0", ",", 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{
+               RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]]}], "]"}]}], 
+          RowBox[{"8", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{
+               RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]], ")"}], 
+            RowBox[{"1", "/", "4"}]]}]], "-", 
+         RowBox[{
+          FractionBox["1", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]], ")"}], 
+           RowBox[{"3", "/", "4"}]], " ", "\[Epsilon]", " ", 
+          RowBox[{
+           SuperscriptBox["EllipticTheta", 
+            TagBox[
+             RowBox[{"(", 
+              RowBox[{"0", ",", "0", ",", "1"}], ")"}],
+             Derivative],
+            MultilineFunction->None], "[", 
+           RowBox[{"2", ",", "0", ",", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]]}], "]"}]}]}], 
+        ")"}]}], ")"}], "/", 
+     SuperscriptBox[
+      RowBox[{"EllipticTheta", "[", 
+       RowBox[{"2", ",", "0", ",", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{
+          RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]]}], "]"}], "2"]}], 
+    "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]], ")"}], 
+        RowBox[{"1", "/", "4"}]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["\[Epsilon]", "2"], " ", 
+           RowBox[{"EllipticTheta", "[", 
+            RowBox[{"2", ",", "0", ",", 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{
+               RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]]}], "]"}]}], 
+          RowBox[{"32", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{
+               RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]], ")"}], 
+            RowBox[{"1", "/", "4"}]]}]], "+", 
+         RowBox[{
+          FractionBox["1", "4"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]], ")"}], 
+           RowBox[{"3", "/", "4"}]], " ", 
+          SuperscriptBox["\[Epsilon]", "2"], " ", 
+          RowBox[{
+           SuperscriptBox["EllipticTheta", 
+            TagBox[
+             RowBox[{"(", 
+              RowBox[{"0", ",", "0", ",", "1"}], ")"}],
+             Derivative],
+            MultilineFunction->None], "[", 
+           RowBox[{"2", ",", "0", ",", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]]}], "]"}]}], "+", 
+         
+         RowBox[{
+          FractionBox["1", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]], ")"}], 
+           RowBox[{"7", "/", "4"}]], " ", 
+          SuperscriptBox["\[Epsilon]", "2"], " ", 
+          RowBox[{
+           SuperscriptBox["EllipticTheta", 
+            TagBox[
+             RowBox[{"(", 
+              RowBox[{"0", ",", "0", ",", "2"}], ")"}],
+             Derivative],
+            MultilineFunction->None], "[", 
+           RowBox[{"2", ",", "0", ",", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]]}], "]"}]}]}], 
+        ")"}]}], ")"}], "/", 
+     RowBox[{"EllipticTheta", "[", 
+      RowBox[{"2", ",", "0", ",", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{
+         RowBox[{"-", "\[Beta]"}], " ", "\[Epsilon]"}]]}], "]"}]}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.9178999609684896`*^9, 3.917903038391711*^9, 3.917903132968014*^9, 
+   3.917903216530942*^9, 3.917903248210764*^9, 3.9179033589332323`*^9, 
+   3.9179033898449497`*^9, 3.917903436874896*^9, 3.917903469493627*^9, 
+   3.917903517733885*^9, 3.917903690896669*^9, {3.9179037627747297`*^9, 
+   3.917903777365718*^9}, {3.917903817522801*^9, 3.917903844290728*^9}, 
+   3.917903909421509*^9, {3.917904057445395*^9, 3.917904072513607*^9}, {
+   3.917904133487623*^9, 3.917904168543736*^9}, 3.9179042217563343`*^9, {
+   3.917904369186706*^9, 3.917904385059511*^9}, 3.917904463215312*^9, {
+   3.917904499718878*^9, 3.917904524301894*^9}, 3.917904615725732*^9, 
+   3.917904750526095*^9, {3.917904887113861*^9, 3.917904897801546*^9}, {
+   3.917904967511174*^9, 3.9179049891613703`*^9}, {3.917905100870296*^9, 
+   3.9179051218453007`*^9}},
+ CellLabel->
+  "Out[570]=",ExpressionUUID->"39d6a945-cfdf-431a-85da-a8bc346743a7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"Cvrot", "[", 
+   RowBox[{"1", ",", "0.941", ",", "2"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.917905082299584*^9, 3.917905204769434*^9}, {
+  3.917905371066478*^9, 3.917905394204255*^9}, {3.917905431486335*^9, 
+  3.9179055787227097`*^9}, {3.917905640530055*^9, 3.917905752831581*^9}, {
+  3.91790624222226*^9, 3.917906286128928*^9}},
+ CellLabel->
+  "In[648]:=",ExpressionUUID->"5d6b5e0f-6204-4dde-b0da-6c07a9c5fd55"],
+
+Cell[BoxData["0.9900782642148656`"], "Output",
+ CellChangeTimes->{{3.917905100878483*^9, 3.917905205227816*^9}, {
+  3.9179053756331587`*^9, 3.917905394955121*^9}, {3.9179054327920628`*^9, 
+  3.917905439075755*^9}, {3.917905473374173*^9, 3.917905579232253*^9}, {
+  3.917905641783477*^9, 3.917905753523066*^9}, {3.917906248234761*^9, 
+  3.9179062865162153`*^9}},
+ CellLabel->
+  "Out[648]=",ExpressionUUID->"716dae6f-1826-4b79-943c-1403b1bd3dde"]
+}, Open  ]]
+},
+WindowSize->{606, 683.25},
+WindowMargins->{{Automatic, 769.5}, {Automatic, 126.75}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+FrontEndVersion->"14.0 for Linux x86 (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f19f8305-fa2f-4cc1-9375-72bdb7c727d0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 785, 16, 31, "Input",ExpressionUUID->"7af3f14d-b93d-4e65-810a-75f5787ed234"],
+Cell[CellGroupData[{
+Cell[1368, 40, 1107, 23, 31, "Input",ExpressionUUID->"a30910aa-f779-48c3-926c-1220f61ceccf"],
+Cell[2478, 65, 1362, 28, 69, "Output",ExpressionUUID->"a19db392-3856-4dc8-9857-719507729913"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3877, 98, 1084, 22, 31, "Input",ExpressionUUID->"5654f166-2ab0-4a16-ad44-9ea1b990a6f2"],
+Cell[4964, 122, 2778, 68, 189, "Output",ExpressionUUID->"74e42a39-bfe9-49c2-b056-b77bed0d11e2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7779, 195, 959, 22, 31, "Input",ExpressionUUID->"59699b22-5b13-491d-bae4-54763d3fd738"],
+Cell[8741, 219, 7934, 210, 558, "Output",ExpressionUUID->"39d6a945-cfdf-431a-85da-a8bc346743a7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16712, 434, 467, 9, 29, "Input",ExpressionUUID->"5d6b5e0f-6204-4dde-b0da-6c07a9c5fd55"],
+Cell[17182, 445, 443, 7, 33, "Output",ExpressionUUID->"716dae6f-1826-4b79-943c-1403b1bd3dde"]
+}, Open  ]]
+}
+]
+*)
+
